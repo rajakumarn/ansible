@@ -27,7 +27,7 @@ while vowel != count:
 #        command1 = 'nslookup %s | tail -2 | cut -c 10-22' % (hostname)
         command2 = 'free -lm | grep -E Mem | cut -c 1-22'
         client = paramiko.Transport(hostname, port)
-        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+#        client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         client.connect(username=username, password=password)
         stdout_data = []
         stderr_data = []
